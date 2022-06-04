@@ -9,7 +9,6 @@ select {
   appearance: none; // using -prefix-free https://leaverou.github.io/prefixfree/
   background: {
     color: $bg-color;
-    image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1255/caret--down-15.png");
     position: right;
     repeat: no-repeat;
   }
@@ -30,6 +29,5 @@ select {
 // IE 8/9 get dafault arrow which covers caret image
 // as long as caret image is small than and positioned
 // behind default arrow
-select::-ms-expand {
-  display: none;
-}
+
+

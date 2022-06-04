@@ -37,7 +37,7 @@ import { ProveComponent } from './components/prove/prove.component';
     CarsByLcoationComponent,
     FAQComponent,
     CarDetailsComponent,
-    ProveComponent
+    ProveComponent,
   ],
     imports: [
         BrowserModule,

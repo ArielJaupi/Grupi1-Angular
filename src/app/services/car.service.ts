@@ -7,7 +7,7 @@ import {Car} from "../intefaces/Car";
   providedIn: 'root'
 })
 export class CarService {
-  private url: string = "http://localhost:8081";
+  private url: string = "http://localhost:8080";
   private CARS_URL: string = "/car/cars";
   private greenCars: string = "car/green/true";
   private offerCars: string = "car/offer"
@@ -20,7 +20,7 @@ export class CarService {
   }
 
   getCarByLocation(location: String): Observable<Car[]> {
-    // @ts-ignore
+
     return this.http.get<Car[]>(this.url + location)
   }
 
