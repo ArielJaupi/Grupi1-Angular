@@ -8,7 +8,7 @@ import {BookService} from "../../services/bookService/book.service";
 })
 export class BookButtonComponent implements OnInit {
 
-  constructor(private bookService:BookService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

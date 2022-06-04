@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {BookService} from "../../services/bookService/book.service";
 import {ActivatedRoute} from "@angular/router";
 import {Car} from "../../intefaces/Car";
 import {CarService} from "../../services/car.service";
@@ -25,7 +24,4 @@ export class CarDetailsComponent implements OnInit {
     return this.carService.getCarById(id).subscribe(car => this.car = car);
   }
 
-  bookCar(addForm: Car) {
-    /* this.bookService.addBooking(addForm);*/
-  }
 }
