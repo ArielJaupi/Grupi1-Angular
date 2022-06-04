@@ -1,12 +1,4 @@
-import {Component} from '@angular/core';
-import {SelectItem} from 'primeng/api';
-import {SelectItemGroup} from 'primeng/api';
-
-
-interface City {
-  name: string,
-  code: string
-}
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-search-form',
@@ -14,10 +6,24 @@ interface City {
   styleUrls: ['./search-form.component.scss']
 })
 export class SearchFormComponent {
-
+  @Output() onSelectCity = new EventEmitter()
+  public cityId?: string
 
   constructor() {
+  }
 
+  public citySelect (event: any) {
+    this.onSelectCity.emit(event.target.value)
+  }
+
+  public search () {
+    if (this.cityId) {
+      // Navigate to list component with city id
+      console.info(this.cityId)
+    }
+    else {
+      alert("Please select a city!")
+    }
   }
 }
 

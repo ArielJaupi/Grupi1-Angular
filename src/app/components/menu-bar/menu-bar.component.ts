@@ -25,7 +25,7 @@ export class MenuBarComponent implements OnInit {
       {
         label: "All Cars",
         icon: "pi pi-car",
-        routerLink: "/all cars"
+        routerLink: "/vehicles"
       },
       {
         label: "Green Cars",
@@ -36,7 +36,7 @@ export class MenuBarComponent implements OnInit {
       {
         label: "FAQ",
         icon: "pi pi-question",
-        routerLink: "/FAQ"
+        routerLink: "/faq"
       },
       {
         label: "Support",

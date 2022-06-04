@@ -1,15 +1,17 @@
 <div class="row align-items-center flex card-container blue-container overflow-hidden ">
   <div class="mb-3 mb-md-0 col-md-3" style="padding: 10px">
     <div class="col-xl-2 col-lg-4 col-md-6 px-2">
-      <select>
-        <option>Select a City</option>
-        <option>Option 1</option>
-        <option>Option 2</option>
+      <select  [(ngModel)]="cityId">
+        <option value="">Select a City</option>
+        <option value="10">Option 1</option>
+        <option value="10">Option 2</option>
       </select>
     </div>
     <div>
-      <input type="submit" value="Search Now"
-             class="btn btn-primary btn-block py-3 flex align-items-center justify-content-center bg-blue-500 font-bold text-white m-2 px-5 py-3 border-round">
+      <button
+        (click)="search()"
+        class="btn btn-primary btn-block py-3 flex align-items-center justify-content-center bg-blue-500 font-bold text-white m-2 px-5 py-3 border-round"
+      ></button>
     </div>
   </div>
 </div>

@@ -8,7 +8,6 @@ import {MenuBarComponent} from './components/menu-bar/menu-bar.component';
 import {HomeComponent} from './pages/home/home.component';
 import {ButtonModule} from "primeng/button";
 import {RippleModule} from "primeng/ripple";
-import {DropdownModule} from 'primeng/dropdown';
 import {SearchFormComponent} from './components/search-form/search-form.component';
 import {FormsModule} from "@angular/forms";
 import {FooterComponent} from './components/footer/footer.component';
@@ -47,7 +46,6 @@ import { BookButtonComponent } from './components/book-button/book-button.compon
         MenubarModule,
         ButtonModule,
         RippleModule,
-        DropdownModule,
         FormsModule,
         RatingModule,
         PanelModule,
