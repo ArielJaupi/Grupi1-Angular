@@ -9,8 +9,9 @@ import {Car} from "../intefaces/Car";
 export class CarService {
   private url: string = "http://localhost:8081";
   private CARS_URL: string = "/car/cars";
-  private greenCars: string = "car/green/true";
-  private offerCars: string = "car/offer"
+  private greenCars: string = "/car/green/true";
+  private offerCars: string = "/car/offer"
+  private carById: string = "/car/id/"
 
   constructor(private http: HttpClient) {
   }
@@ -30,5 +31,9 @@ export class CarService {
 
   getOfferCars(): Observable<Car[]> {
     return this.http.get<Car[]>(this.url + this.offerCars);
+  }
+
+  getCarById(id: number): Observable<Car> {
+    return this.http.get<Car>(this.url + this.carById + id);
   }
 }
