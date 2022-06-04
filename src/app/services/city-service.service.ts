@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
+import {City} from "../intefaces/City";
 
 
 
@@ -15,7 +17,7 @@ export class CityServiceService {
   constructor(private http: HttpClient) {
   }
 
-  getCities() {
-    return this.http.get(this.url + this.CITIES_URL);
+  getCities()  : Observable<City[]>{
+    return this.http.get<City[]>(this.url + this.CITIES_URL);
   }
 }

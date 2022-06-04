@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CityServiceService} from "../../services/city-service.service";
 import {City} from "../../intefaces/City";
-import {Observable} from "rxjs";
 
 
 
@@ -22,13 +21,8 @@ export class SearchFormComponent implements OnInit  {
     this.getCities()
     }
 
-
-  // @ts-ignore
-  private getCities() : Observable<City[]>{
-
-    // @ts-ignore
-    this.cityService.getCities<City[]>().subscribe(cities => this.cities = cities)
-
+  private getCities(){
+    this.cityService.getCities().subscribe(citie => this.cities = citie);
     console.log(this.cities)
   }
 
