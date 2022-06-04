@@ -21,7 +21,7 @@ export class CarService {
   }
 
   getCarByLocation(location: String): Observable<Car[]> {
-    // @ts-ignore
+
     return this.http.get<Car[]>(this.url + location)
   }
 
