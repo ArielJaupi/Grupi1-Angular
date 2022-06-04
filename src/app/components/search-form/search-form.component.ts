@@ -9,9 +9,8 @@ import {CityService} from "../../services/city.service";
   styleUrls: ['./search-form.component.scss']
 })
 export class SearchFormComponent implements OnInit {
-  @Output() onSelectCity = new EventEmitter()
   public cities?: City[];
-  public cityId?: string
+  public cityName?: string
 
   constructor(private cityService: CityService, private router: Router) {
   }
@@ -25,10 +24,10 @@ export class SearchFormComponent implements OnInit {
   }
 
   public search() {
-    if (this.cityId) {
+    if (this.cityName) {
       // Navigate to list component with city id
-      this.router.navigate(["vehicle/location/" + this.cityId]);
-      console.info(this.cityId)
+      this.router.navigate(["vehicle/location/" + this.cityName]);
+      console.info(this.cityName)
     } else {
       alert("Please select a city!")
     }
