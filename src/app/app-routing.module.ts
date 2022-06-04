@@ -17,7 +17,7 @@ const routes: Routes = [
       {path: "#question4", component: FAQComponent}
     ]
   },
-  {path: "car details", component: CarDetailsComponent},
+  {path: "car details/:id", component: CarDetailsComponent},
   {path: "prove", component: ProveComponent}
 ];
 

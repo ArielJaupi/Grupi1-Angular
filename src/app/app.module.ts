@@ -24,6 +24,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { CarDetailsComponent } from './components/car-details/car-details.component';
 import {ChipModule} from "primeng/chip";
 import { ProveComponent } from './components/prove/prove.component';
+import { BookButtonComponent } from './components/book-button/book-button.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ProveComponent } from './components/prove/prove.component';
     CarsByLcoationComponent,
     FAQComponent,
     CarDetailsComponent,
-    ProveComponent
+    ProveComponent,
+    BookButtonComponent
   ],
     imports: [
         BrowserModule,
@@ -53,7 +55,8 @@ import { ProveComponent } from './components/prove/prove.component';
         InputTextModule,
         HttpClientModule,
         DataViewModule,
-        ChipModule
+        ChipModule,
+
     ],
   providers: [],
   bootstrap: [AppComponent]
