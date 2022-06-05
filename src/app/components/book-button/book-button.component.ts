@@ -12,8 +12,4 @@ export class BookButtonComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  handleClick($event: MouseEvent) {
-
-  }
 }
