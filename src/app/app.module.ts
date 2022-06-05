@@ -20,10 +20,14 @@ import {DialogModule} from 'primeng/dialog';
 import {InputTextModule} from 'primeng/inputtext';
 import {FAQComponent} from './pages/faq/faq.component';
 import {HttpClientModule} from "@angular/common/http";
-import { CarDetailsComponent } from './components/car-details/car-details.component';
+import {CarDetailsComponent} from './components/car-details/car-details.component';
 import {ChipModule} from "primeng/chip";
-import { ProveComponent } from './components/prove/prove.component';
-import { GreenCarsComponent } from './pages/green-cars/green-cars.component';
+import {ProveComponent} from './components/prove/prove.component';
+import {GreenCarsComponent} from './pages/green-cars/green-cars.component';
+import {BookComponent} from './components/book/book.component';
+import {CalendarModule} from "primeng/calendar";
+import { BrowserAnimationsModule } from
+    "@angular/platform-browser/animations";
 
 
 @NgModule({
@@ -38,24 +42,29 @@ import { GreenCarsComponent } from './pages/green-cars/green-cars.component';
     FAQComponent,
     CarDetailsComponent,
     ProveComponent,
-    GreenCarsComponent
-  ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        MenubarModule,
-        ButtonModule,
-        RippleModule,
-        FormsModule,
-        RatingModule,
-        PanelModule,
-        DialogModule,
-        InputTextModule,
-        HttpClientModule,
-        DataViewModule,
-        ChipModule,
+    GreenCarsComponent,
+    BookComponent,
 
-    ],
+
+  ],
+  imports: [
+    CalendarModule,
+    BrowserModule,
+    AppRoutingModule,
+    MenubarModule,
+    ButtonModule,
+    RippleModule,
+    FormsModule,
+    RatingModule,
+    PanelModule,
+    DialogModule,
+    InputTextModule,
+    HttpClientModule,
+    DataViewModule,
+    ChipModule,
+    BrowserAnimationsModule,
+
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
