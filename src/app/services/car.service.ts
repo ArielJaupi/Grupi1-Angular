@@ -8,9 +8,11 @@ import {Car} from "../intefaces/Car";
 })
 export class CarService {
   private url: string = "http://localhost:8080";
+  private carByLocation: string = "/car/location/";
   private CARS_URL: string = "/car/cars";
-  private greenCars: string = "car/green/true";
-  private offerCars: string = "car/offer"
+  private greenCars: string = "/car/green/true";
+  private offerCars: string = "/car/offer"
+  private carById: string = "/car/id/"
 
   constructor(private http: HttpClient) {
   }
@@ -20,8 +22,9 @@ export class CarService {
   }
 
   getCarByLocation(location: String): Observable<Car[]> {
+    console.log(this.url);
     // @ts-ignore
-    return this.http.get<Car[]>(this.url + location)
+    return this.http.get<Car[]>(this.url + this.carByLocation + location)
   }
 
   // getGreenCars(): Observable<Car[]> {
@@ -30,5 +33,9 @@ export class CarService {
 
   getOfferCars(): Observable<Car[]> {
     return this.http.get<Car[]>(this.url + this.offerCars);
+  }
+
+  getCarById(id: number): Observable<Car> {
+    return this.http.get<Car>(this.url + this.carById + id);
   }
 }

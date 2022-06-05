@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {Car} from "../../intefaces/Car";
+import {CarService} from "../../services/car.service";
 
 @Component({
   selector: 'app-car-details',
@@ -6,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./car-details.component.scss']
 })
 export class CarDetailsComponent implements OnInit {
+  @Input() car !: Car;
 
-  constructor() { }
+  constructor(private carService: CarService, private route: ActivatedRoute) {
+  }
 
   ngOnInit(): void {
+    let stringId = this.route.snapshot.paramMap.get("id");
+    let id = Number(stringId);
+    this.getCarById(id);
+  }
+
+  getCarById(id: number) {
+    return this.carService.getCarById(id).subscribe(car => this.car = car);
   }
 
 }

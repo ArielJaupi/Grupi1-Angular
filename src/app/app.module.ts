@@ -8,7 +8,6 @@ import {MenuBarComponent} from './components/menu-bar/menu-bar.component';
 import {HomeComponent} from './pages/home/home.component';
 import {ButtonModule} from "primeng/button";
 import {RippleModule} from "primeng/ripple";
-import {DropdownModule} from 'primeng/dropdown';
 import {SearchFormComponent} from './components/search-form/search-form.component';
 import {FormsModule} from "@angular/forms";
 import {FooterComponent} from './components/footer/footer.component';
@@ -47,7 +46,6 @@ import { GreenCarsComponent } from './pages/green-cars/green-cars.component';
         MenubarModule,
         ButtonModule,
         RippleModule,
-        DropdownModule,
         FormsModule,
         RatingModule,
         PanelModule,
@@ -55,7 +53,8 @@ import { GreenCarsComponent } from './pages/green-cars/green-cars.component';
         InputTextModule,
         HttpClientModule,
         DataViewModule,
-        ChipModule
+        ChipModule,
+
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-class City {
-  name!:string;
-  code!:string;
-}
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -11,18 +6,6 @@ class City {
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
-
-  cities: City[] = [];
-
-  selectedCities: City[] = [];
   constructor() {
-    this.cities = [
-      {name: 'New York', code: 'NY'},
-      {name: 'Rome', code: 'RM'},
-      {name: 'London', code: 'LDN'},
-      {name: 'Istanbul', code: 'IST'},
-      {name: 'Paris', code: 'PRS'}
-    ];
   }
 }

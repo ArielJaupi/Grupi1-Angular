@@ -6,21 +6,20 @@ import {FAQComponent} from "./pages/faq/faq.component";
 import {CarDetailsComponent} from "./components/car-details/car-details.component";
 import {ProveComponent} from "./components/prove/prove.component";
 import {GreenCarsComponent} from "./pages/green-cars/green-cars.component";
+import {CarsByLcoationComponent} from "./pages/cars-by-lcoation/cars-by-lcoation.component";
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
   {path: "all cars", component: AllCarsComponent},
   {path: "green cars", component:GreenCarsComponent},
+  {path: "vehicles", component: AllCarsComponent},
+  {path: "vehicles/:location", component: AllCarsComponent},
   {
-    path: "FAQ", component: FAQComponent, children: [
-      {path: "#question1", component: FAQComponent},
-      {path: "#question2", component: FAQComponent},
-      {path: "#question3", component: FAQComponent},
-      {path: "#question4", component: FAQComponent}
-    ]
+    path: "faq", component: FAQComponent
   },
-  {path: "car details", component: CarDetailsComponent},
-  {path: "prove", component: ProveComponent}
+  {path: "vehicle-details/:id", component: CarDetailsComponent},
+  {path: "prove", component: ProveComponent},
+  {path: "vehicle/location/:location", component: CarsByLcoationComponent}
 ];
 
 @NgModule({
