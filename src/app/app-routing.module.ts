@@ -5,10 +5,12 @@ import {AllCarsComponent} from "./pages/all-cars/all-cars.component";
 import {FAQComponent} from "./pages/faq/faq.component";
 import {CarDetailsComponent} from "./components/car-details/car-details.component";
 import {ProveComponent} from "./components/prove/prove.component";
+import {GreenCarsComponent} from "./pages/green-cars/green-cars.component";
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
   {path: "all cars", component: AllCarsComponent},
+  {path: "green cars", component:GreenCarsComponent},
   {
     path: "FAQ", component: FAQComponent, children: [
       {path: "#question1", component: FAQComponent},
