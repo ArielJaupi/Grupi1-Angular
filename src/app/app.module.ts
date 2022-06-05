@@ -23,6 +23,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { CarDetailsComponent } from './components/car-details/car-details.component';
 import {ChipModule} from "primeng/chip";
 import { ProveComponent } from './components/prove/prove.component';
+import { GreenCarsComponent } from './pages/green-cars/green-cars.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { ProveComponent } from './components/prove/prove.component';
     FAQComponent,
     CarDetailsComponent,
     ProveComponent,
+    GreenCarsComponent
   ],
     imports: [
         BrowserModule,
