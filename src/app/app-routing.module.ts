@@ -10,8 +10,7 @@ import {CarsByLcoationComponent} from "./pages/cars-by-lcoation/cars-by-lcoation
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
-  {path: "all cars", component: AllCarsComponent},
-  {path: "green cars", component:GreenCarsComponent},
+  {path: "green-cars", component:GreenCarsComponent},
   {path: "vehicles", component: AllCarsComponent},
   {path: "vehicles/:location", component: AllCarsComponent},
   {
