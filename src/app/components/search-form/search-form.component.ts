@@ -1,35 +1,36 @@
-import {Component, OnInit} from '@angular/core';
-import {CityServiceService} from "../../services/city-service.service";
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {City} from "../../intefaces/City";
-
-
+import {Router} from "@angular/router";
+import {CityService} from "../../services/city.service";
 
 @Component({
   selector: 'app-search-form',
   templateUrl: './search-form.component.html',
   styleUrls: ['./search-form.component.scss']
 })
-export class SearchFormComponent implements OnInit  {
+export class SearchFormComponent implements OnInit {
+  public cities?: City[];
+  public cityName?: string
 
-  cities!: City[] ;
-
-  selectedCity!: City;
-
-  constructor(private cityService: CityServiceService) { }
+  constructor(private cityService: CityService, private router: Router) {
+  }
 
   ngOnInit(): void {
-    this.getCities()
+    this.getCities();
+  }
+
+  public getCities() {
+    this.cityService.getCities().subscribe(city => this.cities = city);
+  }
+
+  public search() {
+    if (this.cityName) {
+      // Navigate to list component with city id
+      this.router.navigate(["vehicle/location/" + this.cityName]);
+      console.info(this.cityName)
+    } else {
+      alert("Please select a city!")
     }
-
-  private getCities(){
-    this.cityService.getCities().subscribe(citie => this.cities = citie);
-    console.log(this.cities)
   }
-
-
-  }
-
-
-
-
+}
 
