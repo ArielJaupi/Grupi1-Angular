@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import{CarService} from "../../services/car.service";
+import {CarService} from "../../services/car.service";
 import {Car} from "../../intefaces/Car";
 import {BookFromAngularService} from "../../services/book-from-angular.service";
 import {BookingForm} from "../../intefaces/BookingForm";
-
+import {CarDetailsComponent} from "../car-details/car-details.component";
 
 
 @Component({
@@ -12,10 +12,10 @@ import {BookingForm} from "../../intefaces/BookingForm";
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.scss']
 })
-export class BookComponent implements OnInit{
+export class BookComponent implements OnInit {
 
   public cars?: Car[];
-  public carId?: number
+  @Input() carId!: number;
 
   constructor(private carService: CarService, private router: Router, private router1: ActivatedRoute,
               private bookAngular: BookFromAngularService) {
@@ -33,15 +33,14 @@ export class BookComponent implements OnInit{
   dropUpDate?: Date;
 
 
-
   ngOnInit() {
     this.es = {
       firstDayOfWeek: 1,
-      dayNames: [ "domingo","lunes","martes","miércoles","jueves","viernes","sábado" ],
-      dayNamesShort: [ "dom","lun","mar","mié","jue","vie","sáb" ],
-      dayNamesMin: [ "D","L","M","X","J","V","S" ],
-      monthNames: [ "enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre" ],
-      monthNamesShort: [ "ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic" ],
+      dayNames: ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"],
+      dayNamesShort: ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"],
+      dayNamesMin: ["D", "L", "M", "X", "J", "V", "S"],
+      monthNames: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
+      monthNamesShort: ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"],
       today: 'Hoy',
       clear: 'Borrar'
     }
@@ -49,7 +48,7 @@ export class BookComponent implements OnInit{
     let today = new Date();
     let month = today.getMonth();
     let year = today.getFullYear();
-    let prevMonth = (month === 0) ? 11 : month -1;
+    let prevMonth = (month === 0) ? 11 : month - 1;
     let prevYear = (prevMonth === 11) ? year - 1 : year;
     let nextMonth = (month === 11) ? 0 : month + 1;
     let nextYear = (nextMonth === 0) ? year + 1 : year;
@@ -62,14 +61,14 @@ export class BookComponent implements OnInit{
 
     let invalidDate = new Date();
     invalidDate.setDate(today.getDate() - 1);
-    this.invalidDates = [today,invalidDate];
+    this.invalidDates = [today, invalidDate];
   }
 
 
   public addBookingForm() {
-    let idjuhu = 1;
+    console.log(this.carId);
     let bookingForm;
-    bookingForm = new BookingForm(idjuhu, this.rangeDates[0], this.rangeDates[1], this.email)
+    bookingForm = new BookingForm(this.carId, this.rangeDates[0], this.rangeDates[1], this.email)
     if (this.rangeDates) {
       this.bookAngular.postBooking(bookingForm).subscribe({
         next: (result) => {
@@ -77,7 +76,6 @@ export class BookComponent implements OnInit{
         },
         error: err => console.error(err)
       })
-      // Navigate to list component with city id
 
       alert("u beeeeee buking!")
     } else {

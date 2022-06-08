@@ -1,20 +1,18 @@
+export class BookingForm {
 
-
-export class BookingForm{
-
-  carId? : number;
+  carId!: number | undefined;
   pickUpDate?: Date;
   dropUpDate?: Date;
   email?: String;
 
-  constructor(id: number, pickUpDate: Date | undefined,
+  constructor(id: number | undefined, pickUpDate: Date | undefined,
               dropUpDate: Date | undefined,
               email: String | undefined,
   ) {
-    this.carId=id;
-    this.pickUpDate=pickUpDate;
-    this.dropUpDate=dropUpDate;
-    this.email=email;
+    this.carId = id;
+    this.pickUpDate = pickUpDate;
+    this.dropUpDate = dropUpDate;
+    this.email = email;
   }
 
 }
