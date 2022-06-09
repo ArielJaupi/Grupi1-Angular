@@ -26,8 +26,8 @@ import {ProveComponent} from './components/prove/prove.component';
 import {GreenCarsComponent} from './pages/green-cars/green-cars.component';
 import {BookComponent} from './components/book/book.component';
 import {CalendarModule} from "primeng/calendar";
-import { BrowserAnimationsModule } from
-    "@angular/platform-browser/animations";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {FieldsetModule} from 'primeng/fieldset';
 
 
 @NgModule({
@@ -63,7 +63,7 @@ import { BrowserAnimationsModule } from
     DataViewModule,
     ChipModule,
     BrowserAnimationsModule,
-
+    FieldsetModule
   ],
   providers: [],
   bootstrap: [AppComponent]
