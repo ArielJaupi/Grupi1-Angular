@@ -50,7 +50,6 @@ a {
   transition: all, var(--transition-time);
   position: relative;
   overflow: hidden;
-  border: 10px solid #ccc;
   text-decoration: none;
 }
 
@@ -120,17 +119,17 @@ a {
 }
 
 .card:after {
-  background: white;
+  background: transparent;
   width: 200%;
   height: 200%;
 }
 
 .card:hover {
-  color: var(--color);
+  color: lemonchiffon;
 }
 
 .card:hover:before, .card:hover:after {
-  transform: scale(1);
+  transform: scale(4);
 }
 
 .card-grid-space .num {
