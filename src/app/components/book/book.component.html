@@ -1,9 +1,12 @@
-<div class="p-field p-col-12 p-md-4">
-  <label >Range</label>
+<div class="p-field p-col-12 p-md-4 grid">
+  <label>Calendar</label>
   <p-calendar [(ngModel)]="rangeDates" selectionMode="range" [readonlyInput]="true" inputId="range"></p-calendar>
+  <input type="email" placeholder="email@email.com" [(ngModel)]="email"/>
+  <button type="pButton" (click)="addBookingForm()" style="background-color: #8aec1f"
+          class="p-button-text p-button-rounded">Book
+  </button>
 </div>
 
-<input type="text" placeholder="email" [(ngModel)]="email" name="email te lutem"/>
-<button (click)="addBookingForm()" name="rezervo"></button>
+
 
 
