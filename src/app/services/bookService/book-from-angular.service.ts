@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {BookingForm} from "../intefaces/BookingForm";
+import {BookingForm} from "../../intefaces/BookingForm";
 import {Observable} from "rxjs";
 
 @Injectable({

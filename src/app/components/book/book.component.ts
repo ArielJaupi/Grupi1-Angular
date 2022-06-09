@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {CarService} from "../../services/car.service";
+import {CarService} from "../../services/carService/car.service";
 import {Car} from "../../intefaces/Car";
-import {BookFromAngularService} from "../../services/book-from-angular.service";
+import {BookFromAngularService} from "../../services/bookService/book-from-angular.service";
 import {BookingForm} from "../../intefaces/BookingForm";
 import {CarDetailsComponent} from "../car-details/car-details.component";
 

@@ -1,23 +1,19 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {City} from "../intefaces/City";
-
-
+import {Car} from "../../intefaces/Car";
 
 @Injectable({
   providedIn: 'root'
 })
-export class CityServiceService {
-
+export class GreenCarsService {
   private url: string = "http://localhost:8080";
-  private CITIES_URL: string = "/city/cities";
-
+  private greenCars: string = "/car/green/true";
 
   constructor(private http: HttpClient) {
-  }
 
-  getCities()  : Observable<City[]>{
-    return this.http.get<City[]>(this.url + this.CITIES_URL);
+  }
+  getGreenCars(): Observable<Car[]> {
+    return this.http.get<Car[]>(this.url + this.greenCars);
   }
 }

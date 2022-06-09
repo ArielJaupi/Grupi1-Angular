@@ -1,7 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {City} from "../../intefaces/City";
 import {Router} from "@angular/router";
-import {CityService} from "../../services/city.service";
+import {CityService} from "../../services/cityService/city.service";
 
 @Component({
   selector: 'app-search-form',
