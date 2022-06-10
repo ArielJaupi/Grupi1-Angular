@@ -5,6 +5,7 @@ import {Car} from "../../intefaces/Car";
 import {BookFromAngularService} from "../../services/bookService/book-from-angular.service";
 import {BookingForm} from "../../intefaces/BookingForm";
 import {CarDetailsComponent} from "../car-details/car-details.component";
+import {Booking} from "../../intefaces/Booking";
 
 
 @Component({
@@ -16,6 +17,7 @@ export class BookComponent implements OnInit {
 
   public cars?: Car[];
   @Input() carId!: number;
+  public bookings?: Booking[];
 
   constructor(private carService: CarService, private router: Router, private router1: ActivatedRoute,
               private bookAngular: BookFromAngularService) {
@@ -62,6 +64,9 @@ export class BookComponent implements OnInit {
     let invalidDate = new Date();
     invalidDate.setDate(today.getDate() - 1);
     this.invalidDates = [today, invalidDate];
+    let stringId = this.router1.snapshot.paramMap.get("id");
+    let id = Number(stringId);
+    this.getBookingByCarId(id)
   }
 
 
@@ -73,11 +78,12 @@ export class BookComponent implements OnInit {
       this.bookAngular.postBooking(bookingForm).subscribe({
         next: (result) => {
           console.info(result)
+          alert(result.message)
+
         },
         error: err => console.error(err)
       })
 
-      alert("u beeeeee buking!")
     } else {
       alert("Please fill in required information!")
     }
@@ -85,5 +91,8 @@ export class BookComponent implements OnInit {
 
   public getCars() {
     this.carService.getAllCars().subscribe(car => this.cars = car);
+  }
+  getBookingByCarId(id: number) {
+    return this.carService.getBookingByCarId(id).subscribe(bookings => this.bookings = bookings);
   }
 }
