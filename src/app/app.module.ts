@@ -28,6 +28,7 @@ import {BookComponent} from './components/book/book.component';
 import {CalendarModule} from "primeng/calendar";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FieldsetModule} from 'primeng/fieldset';
+import { OfferCarsComponent } from './pages/offer-cars/offer-cars.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import {FieldsetModule} from 'primeng/fieldset';
     ProveComponent,
     GreenCarsComponent,
     BookComponent,
+    OfferCarsComponent,
 
 
   ],
