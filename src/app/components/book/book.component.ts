@@ -4,7 +4,6 @@ import {CarService} from "../../services/carService/car.service";
 import {Car} from "../../intefaces/Car";
 import {BookFromAngularService} from "../../services/bookService/book-from-angular.service";
 import {BookingForm} from "../../intefaces/BookingForm";
-import {CarDetailsComponent} from "../car-details/car-details.component";
 import {Booking} from "../../intefaces/Booking";
 
 
@@ -72,9 +71,10 @@ export class BookComponent implements OnInit {
 
   public addBookingForm() {
     console.log(this.carId);
-    let bookingForm;
-    bookingForm = new BookingForm(this.carId, this.rangeDates[0], this.rangeDates[1], this.email)
-    if (this.rangeDates) {
+
+    if (this.rangeDates && this.email) {
+      let bookingForm;
+      bookingForm = new BookingForm(this.carId, this.rangeDates[0], this.rangeDates[1], this.email)
       this.bookAngular.postBooking(bookingForm).subscribe({
         next: (result) => {
           console.info(result)
