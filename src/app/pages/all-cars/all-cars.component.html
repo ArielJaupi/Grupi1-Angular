@@ -1,4 +1,4 @@
-<section class="cards-wrapper" >
+<section class="cards-wrapper flex card-container indigo-container" >
   <div class="card-grid-space" *ngFor="let car of cars">
     <div class="num">{{car.carType}}</div>
     <a class="card" [ngStyle]="{'background-image': 'url(' + car.imagePath + ')'}">
