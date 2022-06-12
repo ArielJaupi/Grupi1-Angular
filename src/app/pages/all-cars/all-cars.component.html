@@ -1,14 +1,27 @@
-<section class="cards-wrapper flex card-container indigo-container" >
-  <div class="card-grid-space" *ngFor="let car of cars">
-    <div class="num">{{car.carType}}</div>
-    <a class="card" [ngStyle]="{'background-image': 'url(' + car.imagePath + ')'}">
-      <div>
-        <h1>${{car.price}}</h1>
-        <p>{{car.year0fRelease}}</p>
-        <div class="tags">
-        </div>
-        <button pButton type="button" label="Book" routerLink="/vehicle-details/{{car.id}}"></button>
+<div class="grid container">
+  <div class="col-3" *ngFor="let car of cars">
+    <p-card [header]="car.carType">
+      <ng-template pTemplate="header">
+        <div class="py-8" [ngStyle]="{'background-image': 'url(' + car.imagePath + ')', 'background-position': 'center', 'background-size': 'cover', 'background-repeat': 'no-repeat'}"></div>
+      </ng-template>
+      <ng-template pTemplate="footer">
+        <button class="" pButton type="button" label="Book" routerLink="/vehicle-details/{{car.id}}"></button>
+      </ng-template>
+    </p-card>
+
+    <!--<div class="cards-wrapper flex card-container indigo-container flex-wrap align-items-center justify-content-center" >
+      <div class="card-grid-space " *ngFor="let car of cars">
+        <div >{{car.carType}}</div>
+        <a class="card" [ngStyle]="{'background-image': 'url(' + car.imagePath + ')'}">
+          <div>
+            <h1 class="absolute top-0 left-0 text-center font-bold flex align-items-center justify-content-center w-4rem h-4rem border-round">${{car.price}}</h1>
+            <p class="absolute bottom-0 left-10 text-white font-bold flex align-items-center justify-content-center w-4rem h-4rem border-round">Viti:{{car.year0fRelease}}</p>
+            <div class="tags">
+            </div>
+            <button class="absolute bottom-0 right-0 bg-blue-500 text-white font-bold flex align-items-center justify-content-center w-4rem h-4rem border-round" pButton type="button" label="Book" routerLink="/vehicle-details/{{car.id}}"></button>
+          </div>
+        </a>
       </div>
-    </a>
+    </div>-->
   </div>
-</section>
+</div>

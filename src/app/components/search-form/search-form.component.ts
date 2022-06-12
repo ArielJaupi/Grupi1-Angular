@@ -9,7 +9,7 @@ import {CityService} from "../../services/cityService/city.service";
   styleUrls: ['./search-form.component.scss']
 })
 export class SearchFormComponent implements OnInit {
-  public cities?: City[];
+  public cities: City[] = [];
   public cityName?: string
 
   constructor(private cityService: CityService, private router: Router) {

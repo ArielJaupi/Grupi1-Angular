@@ -29,6 +29,8 @@ import {CalendarModule} from "primeng/calendar";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FieldsetModule} from 'primeng/fieldset';
 import { OfferCarsComponent } from './pages/offer-cars/offer-cars.component';
+import {DropdownModule} from 'primeng/dropdown';
+import {CardModule} from 'primeng/card';
 
 
 @NgModule({
@@ -65,7 +67,9 @@ import { OfferCarsComponent } from './pages/offer-cars/offer-cars.component';
     DataViewModule,
     ChipModule,
     BrowserAnimationsModule,
-    FieldsetModule
+    FieldsetModule,
+    DropdownModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

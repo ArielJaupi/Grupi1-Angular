@@ -1,18 +1,23 @@
 <div>
-<div class="p-field p-col-12 p-md-4 grid">
-  <label>Calendar</label>
-  <p-calendar [(ngModel)]="rangeDates" selectionMode="range" [readonlyInput]="true" inputId="range"></p-calendar>
-  <input type="email" placeholder="email@email.com" [(ngModel)]="email"/>
-  <button type="pButton" (click)="addBookingForm()" style="background-color: #8aec1f"
-          class="p-button-text p-button-rounded">Book
-  </button>
-
-</div>
+  <div class="formgroup-inline">
+    <p-calendar placeholder="Calendar" class="field" [(ngModel)]="rangeDates" selectionMode="range"
+                [readonlyInput]="true" inputId="range"></p-calendar>
+    <input class="field" type="email" placeholder="email@email.com" [(ngModel)]="email"/>
+    <button type="pButton" (click)="addBookingForm()" style=" background-color: #006fc2  "
+            class="field">
+      <label style="color: #f2f5f5">Book</label>
+    </button>
+  </div>
 
   <div class="text-500 font-medium">Unavailable dates (Already booked) :</div>
 
-  <li *ngFor="let booked of bookings">
-    <span class="badge">{{booked.pickUpDate| date:'shortDate'}} - {{booked.dropUpDate| date:'shortDate'}}</span>
-  </li>
+  <div class="card flex flex-wrap md:justify-content-between justify-content-center">
+    <li
+      class="border-dashed md:border-solid border-blue-500 shadow-1 m-2 flex align-items-center justify-content-center"
+      style="min-width: 10px; min-height: 10px" *ngFor="let booked of bookings ">
+      <span class="badge">{{booked.pickUpDate| date:'shortDate'}} - {{booked.dropUpDate| date:'shortDate'}}</span>
+    </li>
+  </div>
+
 </div>
 

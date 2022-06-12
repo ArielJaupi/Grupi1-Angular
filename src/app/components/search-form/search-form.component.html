@@ -1,17 +1,31 @@
-<div class="row align-items-center flex card-container blue-container overflow-hidden ">
-  <div class="mb-3 mb-md-0 col-md-3" style="padding: 10px">
-    <div class="menu">
-      <label style="color: whitesmoke">Select A City
-      <select [(ngModel)]="cityName" required aria-label="Select a City">
-        <option *ngFor="let city of cities " value="{{city.cityName}}">
-          {{city.cityName}}
-        </option>
-      </select>
-      </label>
-    </div>
-    <div >
-      <button (click)="search()" pButton type="button" label="Search" icon="pi pi-search" iconPos="right" class="p-button-text p-button-text "></button>
+<div
+  style="background-image: url('assets/images/homeFoto.jpeg');  background-position: center; background-size: cover; background-repeat: no-repeat"
+  class="py-8"
+>
+  <div class="grid fluid container">
+    <div class="col-12 md:col-5 lg:col-4">
+      <div class="text-6xl text-primary font-bold mb-3 font-italic text-white">Book your car now!</div>
+      <div class="flex flex-column border-1 border-round-2xl border-white p-4 ">
+        <p-dropdown
+          placeholder="Choose a city"
+          [options]="cities"
+          class="w-full"
+          [(ngModel)]="cityName" optionLabel="cityName" optionValue="cityName">
+        </p-dropdown>
+        <button (click)="search()"
+                pButton
+                type="button"
+                label="Search"
+                class="mt-3 bg-transparent border-white"
+                style=" width: inherit !important;">
+        </button>
+      </div>
     </div>
   </div>
 </div>
+<style lang="scss">
 
+  ::ng-deep .p-dropdown {
+    width: 100%;
+  }
+</style>
