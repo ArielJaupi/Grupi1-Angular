@@ -1,7 +1,9 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Car} from "../../intefaces/Car";
 import {CarService} from "../../services/carService/car.service";
+import {CityService} from "../../services/cityService/city.service";
+import {City} from "../../intefaces/City";
 
 @Component({
   selector: 'app-car-details',
@@ -9,7 +11,7 @@ import {CarService} from "../../services/carService/car.service";
   styleUrls: ['./car-details.component.scss']
 })
 export class CarDetailsComponent implements OnInit {
-  @Input() car !: Car;
+  @Input() car ?: Car;
 
 
   constructor(private carService: CarService, private route: ActivatedRoute) {
@@ -30,5 +32,6 @@ export class CarDetailsComponent implements OnInit {
   getCarById(id: number) {
     return this.carService.getCarById(id).subscribe(car => this.car = car);
   }
+
 
 }

@@ -20,6 +20,6 @@ export class AllCarsComponent implements OnInit {
   }
 
   getCars() {
-    this.carService.getAllCars().subscribe(cars => this.cars = cars);
+    this.carService.getAllCars().subscribe(makinat => this.cars = makinat);
   }
 }

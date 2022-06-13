@@ -1,0 +1,14 @@
+<div class="grid p-fluid">
+  <div class="col-12 md:col-4">
+    <div class="p-inputgroup" style="margin: 10px">
+      <span class="p-inputgroup-addon"><i class="pi pi-eye"></i></span>
+      <input type="text" pInputText placeholder="YOUR ID" [(ngModel)]="uuid">
+      <button pButton label="Show" style="padding: 10px"
+              routerLink="/booking-details/{{uuid}}"></button>
+    </div>
+  </div>
+  <div>
+    <app-timeline></app-timeline>
+  </div>
+</div>
+

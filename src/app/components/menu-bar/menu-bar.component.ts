@@ -44,7 +44,8 @@ export class MenuBarComponent implements OnInit {
       {
         label: "Support",
         icon: "pi \n" +
-          "pi-question-circle"
+          "pi-question-circle",
+        routerLink: "support"
       }
     ];
 

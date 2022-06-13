@@ -22,16 +22,18 @@ import {FAQComponent} from './pages/faq/faq.component';
 import {HttpClientModule} from "@angular/common/http";
 import {CarDetailsComponent} from './components/car-details/car-details.component';
 import {ChipModule} from "primeng/chip";
-import {ProveComponent} from './components/prove/prove.component';
 import {GreenCarsComponent} from './pages/green-cars/green-cars.component';
 import {BookComponent} from './components/book/book.component';
 import {CalendarModule} from "primeng/calendar";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FieldsetModule} from 'primeng/fieldset';
-import { OfferCarsComponent } from './pages/offer-cars/offer-cars.component';
+import {OfferCarsComponent} from './pages/offer-cars/offer-cars.component';
 import {DropdownModule} from 'primeng/dropdown';
 import {CardModule} from 'primeng/card';
-
+import {SupportComponent} from './pages/support/support.component';
+import {BookingDetailsComponent} from './components/booking-details/booking-details.component';
+import {TimelineModule} from 'primeng/timeline';
+import { TimelineComponent } from './components/timeline/timeline.component';
 
 @NgModule({
   declarations: [
@@ -44,10 +46,12 @@ import {CardModule} from 'primeng/card';
     CarsByLcoationComponent,
     FAQComponent,
     CarDetailsComponent,
-    ProveComponent,
     GreenCarsComponent,
     BookComponent,
     OfferCarsComponent,
+    SupportComponent,
+    BookingDetailsComponent,
+    TimelineComponent,
 
 
   ],
@@ -69,7 +73,8 @@ import {CardModule} from 'primeng/card';
     BrowserAnimationsModule,
     FieldsetModule,
     DropdownModule,
-    CardModule
+    CardModule,
+    TimelineModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -29,14 +29,6 @@ export class CarService {
     return this.http.get<Car[]>(this.url + this.carByLocation + location)
   }
 
-  // getGreenCars(): Observable<Car[]> {
-  //   return this.http.get<Car[]>(this.url + this.greenCars);
-  // }
-
-  getOfferCars(): Observable<Car[]> {
-    return this.http.get<Car[]>(this.url + this.offerCars);
-  }
-
   getCarById(id: number): Observable<Car> {
     return this.http.get<Car>(this.url + this.carById + id);
   }

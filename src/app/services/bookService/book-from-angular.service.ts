@@ -13,8 +13,7 @@ export class BookFromAngularService {
   }
 
 
-  postBooking(bookingForm: BookingForm):Observable<any>{
-    const headers = {'content-type': 'application/json'}
+  postBooking(bookingForm: BookingForm): Observable<any> {
     const body = JSON.stringify(bookingForm);
     console.log(body);
     return this.http.post<BookingForm>(this.url, bookingForm);

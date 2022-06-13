@@ -20,6 +20,6 @@ export class GreenCarsComponent implements OnInit {
   }
 
   getGreenCars() {
-    this.greenService.getGreenCars().subscribe(cars => this.cars = cars);
+    this.greenService.getGreenCars().subscribe(car => this.cars = car);
   }
 }

@@ -1,0 +1,47 @@
+<div class="surface-ground px-4 py-8 md:px-6 lg:px-8" *ngIf="booking">
+  <div class="text-900 font-bold text-6xl mb-4 text-center">Booking Details</div>
+  <div class="grid">
+    <div class="col-12">
+      <div class="p-3 h-full">
+        <div class="shadow-2 p-3 h-full flex flex-column surface-card" style="border-radius: 6px">
+          <div class="text-900 font-medium text-xl mb-2">City</div>
+          <div class="text-600">{{booking.car.city.cityName}}</div>
+          <br>
+          <div class="text-900 font-medium text-xl mb-2">CarType</div>
+          <div class="text-600">{{booking.car.carType}}</div>
+          <hr class="my-3 mx-0 border-top-1 border-none surface-border"/>
+          <div class="flex align-items-center">
+            <span class="font-bold text-2xl text-900">${{booking.totalPrice}}</span>
+            <span class="ml-2 font-medium text-600">Total Price</span>
+          </div>
+          <hr class="my-3 mx-0 border-top-1 border-none surface-border"/>
+          <ul class="list-none p-0 m-0 flex-grow-1">
+            <li class="flex align-items-center mb-3">
+              <i class="pi pi-check-circle text-green-500 mr-2"></i>
+              <span class="text-900">Color : {{booking.car.color}}</span>
+            </li>
+            <li class="flex align-items-center mb-3">
+              <i class="pi pi-check-circle text-green-500 mr-2"></i>
+              <span class="text-900">Seats : {{booking.car.seats}}</span>
+            </li>
+            <li class="flex align-items-center mb-3">
+              <i class="pi pi-check-circle text-green-500 mr-2"></i>
+              <span class="text-900">Car release year : {{booking.car.year0fRelease}}</span>
+            </li>
+            <li class="flex align-items-center mb-3">
+              <i class="pi pi-check-circle text-green-500 mr-2"></i>
+              <span class="text-900">Pick Up Date : {{booking.pickUpDate}}</span>
+            </li>
+            <li class="flex align-items-center mb-3">
+              <i class="pi pi-check-circle text-green-500 mr-2"></i>
+              <span class="text-900">Drop Up Date : {{booking.dropUpDate}}</span>
+            </li>
+          </ul>
+          <hr class="mb-3 mx-0 border-top-1 border-none surface-border mt-auto"/>
+          <button pButton type="button" label="Reschedule Booking" style="margin: 10px"></button>
+          <button pButton type="button" label="Cancel Booking" class="p-button-danger" style="margin: 10px"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

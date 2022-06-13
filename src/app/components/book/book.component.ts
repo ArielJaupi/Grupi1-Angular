@@ -30,9 +30,6 @@ export class BookComponent implements OnInit {
   rangeDates!: Date[];
   es: any;
   public email?: String;
-  pickUpDate?: Date;
-  dropUpDate?: Date;
-
 
   ngOnInit() {
     this.es = {
@@ -70,8 +67,6 @@ export class BookComponent implements OnInit {
 
 
   public addBookingForm() {
-    console.log(this.carId);
-
     if (this.rangeDates && this.email) {
       let bookingForm;
       bookingForm = new BookingForm(this.carId, this.rangeDates[0], this.rangeDates[1], this.email)
@@ -89,9 +84,6 @@ export class BookComponent implements OnInit {
     }
   }
 
-  public getCars() {
-    this.carService.getAllCars().subscribe(car => this.cars = car);
-  }
   getBookingByCarId(id: number) {
     return this.carService.getBookingByCarId(id).subscribe(bookings => this.bookings = bookings);
   }
