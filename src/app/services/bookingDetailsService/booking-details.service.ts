@@ -13,7 +13,7 @@ export class BookingDetailsService {
   constructor(private http: HttpClient) {
   }
 
-    getBookingWithUUID(uuid: string | null): Observable<Booking> {
+  getBookingWithUUID(uuid: string | null): Observable<Booking> {
     return this.http.get<Booking>(this.url + this.bookingWithUUID + uuid);
   }
 }

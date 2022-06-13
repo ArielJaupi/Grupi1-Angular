@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BookingDetailsService} from "../../services/bookingDetailsService/booking-details.service";
 import {Booking} from "../../intefaces/Booking";
 import {ActivatedRoute} from "@angular/router";

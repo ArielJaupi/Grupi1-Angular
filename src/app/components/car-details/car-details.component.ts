@@ -2,8 +2,6 @@ import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Car} from "../../intefaces/Car";
 import {CarService} from "../../services/carService/car.service";
-import {CityService} from "../../services/cityService/city.service";
-import {City} from "../../intefaces/City";
 
 @Component({
   selector: 'app-car-details',
@@ -25,8 +23,7 @@ export class CarDetailsComponent implements OnInit {
 
   getId(): number {
     let stringId = this.route.snapshot.paramMap.get("id");
-    let id = Number(stringId);
-    return id;
+    return Number(stringId);
   }
 
   getCarById(id: number) {

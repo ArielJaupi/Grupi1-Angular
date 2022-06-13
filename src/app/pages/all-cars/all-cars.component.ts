@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CarService} from "../../services/carService/car.service";
 import {Car} from "../../intefaces/Car";
-import {PrimeNGConfig} from "primeng/api";
 
 
 @Component({

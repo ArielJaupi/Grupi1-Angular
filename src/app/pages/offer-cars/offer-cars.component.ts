@@ -1,9 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Car} from "../../intefaces/Car";
 import {OfferCarsService} from "../../services/offerCarService/offer-cars.service";
-
-class OfferService {
-}
 
 @Component({
   selector: 'app-offer-cars',

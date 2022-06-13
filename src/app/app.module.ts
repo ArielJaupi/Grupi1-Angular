@@ -33,7 +33,7 @@ import {CardModule} from 'primeng/card';
 import {SupportComponent} from './pages/support/support.component';
 import {BookingDetailsComponent} from './components/booking-details/booking-details.component';
 import {TimelineModule} from 'primeng/timeline';
-import { TimelineComponent } from './components/timeline/timeline.component';
+import {TimelineComponent} from './components/timeline/timeline.component';
 
 @NgModule({
   declarations: [

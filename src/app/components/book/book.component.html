@@ -3,7 +3,7 @@
     <p-calendar placeholder="Calendar" class="field" [(ngModel)]="rangeDates" selectionMode="range"
                 [readonlyInput]="true" inputId="range"></p-calendar>
     <input class="field" type="email" placeholder="email@email.com" [(ngModel)]="email"/>
-    <button type="pButton" (click)="addBookingForm()" style=" background-color: #006fc2  "
+    <button (click)="addBookingForm()" style=" background-color: #006fc2  "
             class="field">
       <label style="color: #f2f5f5">Book</label>
     </button>

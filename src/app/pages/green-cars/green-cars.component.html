@@ -5,13 +5,15 @@
       <ng-template pTemplate="header">
         <div class="py-8"
              [ngStyle]="{'background-image': 'url(' + car.imagePath + ')', 'background-position': 'center', 'background-size': 'cover', 'background-repeat': 'no-repeat'}"></div>
-        <div>Cmimi per dite :{{car.price}}$</div>
-        <div>Sedilje :{{car.seats}}</div>
+        <div>City :{{car.city.cityName}}</div>
+        <div>Price per day :{{car.price}}$</div>
+        <div>Seats :{{car.seats}}</div>
         <div>Kambio :{{car.kambio}}</div>
       </ng-template>
       <ng-template pTemplate="footer">
-        <button class="border-round-bottom-2xl" pButton type="button" label="Book" routerLink="/vehicle-details/{{car.id}}"></button>
+        <button class="" pButton type="button" label="Book" routerLink="/vehicle-details/{{car.id}}"></button>
       </ng-template>
     </p-card>
   </div>
 </div>
+

@@ -11,8 +11,6 @@ export class CarService {
   private url: string = "http://localhost:8080";
   private carByLocation: string = "/car/location/";
   private CARS_URL: string = "/car/cars";
-  private greenCars: string = "/car/green/true";
-  private offerCars: string = "/car/offer"
   private carById: string = "/car/id/"
   private bookingByCarId: string = "/booking/bookingByCarId/"
 
@@ -32,6 +30,7 @@ export class CarService {
   getCarById(id: number): Observable<Car> {
     return this.http.get<Car>(this.url + this.carById + id);
   }
+
   getBookingByCarId(id: number): Observable<Booking[]> {
     return this.http.get<Booking[]>(this.url + this.bookingByCarId + id);
   }

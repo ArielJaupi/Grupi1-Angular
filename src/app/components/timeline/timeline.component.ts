@@ -16,9 +16,13 @@ export class TimelineComponent implements OnInit {
         icon: PrimeIcons.ENVELOPE,
         color: '#f4f3f5'
       },
-      {status: 'If your ID is correct then you can see all your booking details.',icon: PrimeIcons.INFO_CIRCLE, color: '#f4f3f5'},
+      {
+        status: 'If your ID is correct then you can see all your booking details.',
+        icon: PrimeIcons.INFO_CIRCLE,
+        color: '#f4f3f5'
+      },
       {status: 'You can reschedule your booking', icon: PrimeIcons.PENCIL, color: '#f4f3f5'},
-      {status: 'You can cancel your booking',  icon: PrimeIcons.BACKWARD, color: '#f4f3f5'}
+      {status: 'You can cancel your booking', icon: PrimeIcons.BACKWARD, color: '#f4f3f5'}
     ];
   }
 
